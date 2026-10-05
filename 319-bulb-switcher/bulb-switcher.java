@@ -6,6 +6,17 @@ class Solution {
         if (n == 1)
             return 1;
 
-        return (int) Math.sqrt(n);
+        int i = 1;
+        int count = 0;
+
+        while (i <= n) {
+            int sqrt = (int) Math.sqrt(i);
+
+            if (sqrt * sqrt == i) {
+                count++;
+            }
+            i++;
+        }
+        return count;
     }
 }
